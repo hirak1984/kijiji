@@ -1,0 +1,40 @@
+	WANTED("http://www.kijiji.ca/b-buy-sell/city-of-toronto/c10l1700273r50.0?ad=wanted&price=0__200"), 
+			OFFERING("http://www.kijiji.ca/b-buy-sell/city-of-toronto/c10l1700273r50.0?ad=offering&price=0__200");
+	
+	!text.contains("buyandsell")
+	
+			/*"clothing",
+			"furniture", "books", "babyitems", "other", "home-indoor", "electronics", "tickets",
+			"sportinggoods,exercise", "videogames,consoles", "toys,games", "art,collectibles", "phones",
+			// "jewellery,watches",
+			"homeappliances", "bikes", "home-outdoor", "computeraccessories", "tools", "musicalinstruments", "audio",
+			"hobbies,crafts", "cds,dvds,blu-ray", "homerenovationmaterials", "health,specialneeds",
+			"cameras,camcorders", "computers", "TVs,video", "business,industrial"
+			*/);
+
+	/*public static enum HOMEPAGE_URLS {
+		WANTED("http://www.kijiji.ca/b-buy-sell/%sr50.0?ad=wanted&price=0__200"), OFFERING(
+				"http://www.kijiji.ca/b-buy-sell/%sr50.0?ad=offering&price=0__200");
+		
+		// private static final String
+		// locationPart="gta-greater-toronto-area/c10l1700272";
+		//
+		final String locationPart = "city-of-toronto/c10l1700273";
+		private String url;
+
+		HOMEPAGE_URLS(String url) {
+			this.url = url;
+		}
+
+		public String getUrl() {
+			return String.format(url, locationPart);
+		}
+
+		public static List<String> SOURCE_ALL() {
+			List<String> list = new ArrayList<>();
+			Arrays.stream(HOMEPAGE_URLS.values()).forEach(URL -> {
+				list.add(URL.getUrl());
+			});
+			return list;
+		}
+	}*/

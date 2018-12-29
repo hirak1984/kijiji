@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="rss">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="channel">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="title" type="xs:string"></xs:element>
+							<xs:element name="link" type="xs:string"></xs:element>
+							<xs:element name="description" type="xs:string"></xs:element>
+							<xs:element name="language" type="xs:string"></xs:element>
+							<xs:element name="copyright" type="xs:string"></xs:element>
+							<xs:element name="pubDate" type="xs:dateTime"></xs:element>
+							<xs:element name="date" type="xs:dateTime"></xs:element>
+							<xs:element name="rights" type="xs:string"></xs:element>
+							<xs:element name="image">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="title" type="xs:string"></xs:element>
+										<xs:element name="url" type="xs:string"></xs:element>
+										<xs:element name="link" type="xs:string"></xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="item" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="title" type="xs:string"></xs:element>
+										<xs:element name="link" type="xs:string"></xs:element>
+										<xs:element name="description" type="xs:string"></xs:element>
+										<xs:element name="enclosure" maxOccurs="unbounded">
+											<xs:complexType>
+												<xs:attribute name="url" type="xs:string"></xs:attribute>
+												<xs:attribute name="type" type="xs:string"></xs:attribute>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="pubDate" type="xs:dateTime"></xs:element>
+										<xs:element name="guid" type="xs:string"></xs:element>
+										<xs:element name="date" type="xs:dateTime"></xs:element>
+										<xs:element name="lat" type="xs:double"></xs:element>
+										<xs:element name="long" type="xs:double"></xs:element>
+										<xs:element name="price" type="xs:int"></xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+			<xs:attribute name="dc" type="xs:string"></xs:attribute>
+			<xs:attribute name="g-core" type="xs:string"></xs:attribute>
+			<xs:attribute name="geo" type="xs:string"></xs:attribute>
+			<xs:attribute name="version" type="xs:int"></xs:attribute>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>
